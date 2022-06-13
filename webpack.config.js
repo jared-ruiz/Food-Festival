@@ -1,6 +1,6 @@
 const path = require("path");
 const webpack = require("webpack");
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 
 module.exports = {
     //beginning of the dependency graph
@@ -28,7 +28,7 @@ module.exports = {
                                 return "[path][name].[ext]"
                             },
                             publicPath: function(url) {
-                                return url.replace('.../', '/assets/')
+                                return url.replace('../', '/assets/')
                             }
                         }
                     },
